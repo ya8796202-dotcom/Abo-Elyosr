@@ -1,145 +1,209 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
-  <title>موقع ياسر</title>
-  <link rel="stylesheet" href="style.css">
+  <title>موقعي الجديد</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(90deg, #d40000, #ff6600);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+      background: #fff;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #d40000;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .testimonial {
+      background: #f1f1f1;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      font-style: italic;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    form input, form button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #d40000;
+    }
+  </style>
 </head>
-  <link rel="stylesheet" href="style.css">
-
 <body>
-
   <header>
-    <h1 class="hero-title">مرحبا بكم في موقع ياسر 🚀</h1>
+    <h1>أهلاً بيك في موقعي الجديد 🚀</h1>
+    <nav>
+      <a href="#about">من نحن</a>
+      <a href="#services">الخدمات</a>
+      <a href="#gallery">المعرض</a>
+      <a href="#team">الفريق</a>
+      <a href="#features">المميزات</a>
+      <a href="#blog">المدونة</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#newsletter">النشرة البريدية</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="card">
-      <h2>من نحن</h2>
-      <p>نحن فريق متخصص في الإلكترونيات والبرمجة، نقدم حلول مبتكرة للأجهزة الذكية والمشاريع التقنية.</p>
-    </div>
+  <section id="about">
+    <h2>من نحن 🤝</h2>
+    <p>هذا الموقع مخصص لعرض أعمالي ومشاريعي في الإلكترونيات والروبوتات ✨.</p>
+  </section>
 
-    <div class="card">
-      <h2>خدماتنا</h2>
-      <ul>
-        <li>تصميم دوائر إلكترونية متقدمة</li>
-        <li>برمجة أنظمة مدمجة (Arduino / Raspberry Pi)</li>
-        <li>تطوير مواقع وتطبيقات ويب</li>
-        <li>إنتاج محتوى مرئي للتسويق</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>شاهد الفيديو 🎬</h2>
-      <div class="video-container">
-        <iframe 
-          src="https://www.youtube.com/embed/jDW7SkUcfbU" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
-    <div class="buttons">
-      <a href="#" class="btn subscribe">اشترك الآن</a>
-      <a href="#" class="btn contact">تواصل معنا</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 موقع ياسر - جميع الحقوق محفوظة</p>
-  </footer>
-
-</body>
-</html>
-<script>
-  // تأثير دخول العناصر عند التمرير
-  const cards = document.querySelectorAll('.card');
-  const options = {
-    threshold: 0.2
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, options);
-
-  cards.forEach(card => {
-    observer.observe(card);
-  });
-
-  // تفاعل عند الضغط على الأزرار
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.add('clicked');
-      setTimeout(() => btn.classList.remove('clicked'), 300);
-    });
-  });
-</script>
-<main>
-  <!-- الأقسام القديمة (من نحن، خدماتنا، الفيديو...) -->
-
-  <!-- رؤيتنا ورسالتنا -->
-  <div class="card">
-    <h2>رؤيتنا ورسالتنا 🌟</h2>
-    <p>نسعى إلى أن نكون رواد الابتكار في مجال الإلكترونيات والبرمجة، ونوفر حلولاً عملية تسهّل حياة الناس وتفتح آفاقاً جديدة للتكنولوجيا.</p>
-  </div>
-
-  <!-- مميزاتنا -->
-  <div class="card">
-    <h2>مميزاتنا 💡</h2>
+  <section id="services">
+    <h2>الخدمات ⚙️</h2>
     <ul>
-      <li>سرعة التنفيذ مع الحفاظ على الجودة</li>
-      <li>دعم فني متواصل</li>
-      <li>أفكار إبداعية تناسب السوق المحلي والعالمي</li>
-      <li>أسعار تنافسية وخطط مرنة</li>
+      <li>تصميم دوائر إلكترونية 🔌</li>
+      <li>برمجة روبوتات ذكية 🤖</li>
+      <li>تطوير مواقع ويب 🌐</li>
     </ul>
-  </div>
+  </section>
 
-  <!-- آراء العملاء -->
-  <div class="card testimonials">
-    <h2>آراء عملائنا 🗣️</h2>
-    <blockquote>
-      <p>"خدمة ممتازة وفريق محترف ساعدني في إنجاز مشروعي بسرعة!"</p>
-      <cite>- محمد من القاهرة</cite>
-    </blockquote>
-    <blockquote>
-      <p>"أفضل تجربة مع فريق تقني، دعمهم المستمر فرق معايا كتير."</p>
-      <cite>- سارة من الإسكندرية</cite>
-    </blockquote>
-  </div>
+  <section id="gallery">
+    <h2>المعرض 📸</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/200" alt="مشروع 1">
+      <img src="https://via.placeholder.com/200" alt="مشروع 2">
+      <img src="https://via.placeholder.com/200" alt="مشروع 3">
+    </div>
+  </section>
 
-  <!-- الأسئلة الشائعة -->
-  <div class="card faq">
+  <section id="team">
+    <h2>الفريق 👨‍💻👩‍💻</h2>
+    <ul>
+      <li>ياسر – قائد المشاريع 🚀</li>
+      <li>أحمد – مبرمج الأنظمة 🔧</li>
+      <li>سارة – مصممة جرافيك 🎨</li>
+    </ul>
+  </section>
+
+  <section id="features">
+    <h2>المميزات 🌟</h2>
+    <ul>
+      <li>تصميم عصري وجذاب ✨</li>
+      <li>سهولة الاستخدام 🖱️</li>
+      <li>دعم متعدد اللغات 🌍</li>
+      <li>توافق مع جميع الأجهزة 📱💻</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>المدونة 📝</h2>
+    <article>
+      <h3>كيف تبدأ مشروع روبوت بسيط 🤖</h3>
+      <p>ابدأ باستخدام Arduino وبعض الحساسات، وطور روبوت يتفاعل مع البيئة المحيطة.</p>
+    </article>
+    <article>
+      <h3>أفضل طرق لتوفير الطاقة 🔋</h3>
+      <p>استخدم مصادر طاقة بديلة مثل الألواح الشمسية لتقليل التكلفة وزيادة الكفاءة.</p>
+    </article>
+  </section>
+
+  <section id="faq">
     <h2>الأسئلة الشائعة ❓</h2>
     <details>
-      <summary>هل تقدمون تدريب على المشاريع؟</summary>
-      <p>نعم، نقدم ورش عمل ودورات تدريبية مخصصة.</p>
+      <summary>هل يمكن شراء المنتجات أونلاين؟ 🛒</summary>
+      <p>نعم، قريباً سيتم إطلاق متجر إلكتروني خاص بنا.</p>
     </details>
     <details>
-      <summary>هل يمكن تنفيذ مشاريع صغيرة للأفراد؟</summary>
-      <p>بالطبع، نحن ندعم المشاريع الصغيرة والكبيرة على حد سواء.</p>
+      <summary>هل تدعمون الشحن الدولي؟ 🌍</summary>
+      <p>حالياً داخل مصر فقط، لكن نخطط للتوسع قريباً.</p>
     </details>
     <details>
-      <summary>كيف يمكنني الدفع؟</summary>
-      <p>نوفر طرق دفع متعددة: نقدي، تحويل بنكي، ومحافظ إلكترونية.</p>
+      <summary>هل يمكنني تجربة الروبوت قبل الشراء؟ 🤖</summary>
+      <p>نعم، لدينا عروض تجريبية في المعارض المحلية.</p>
     </details>
-  </div>
+  </section>
 
-  <!-- تواصل معنا -->
-  <div class="card contact-form">
-    <h2>تواصل معنا 📩</h2>
+  <section id="newsletter">
+    <h2>النشرة البريدية 📧</h2>
     <form>
-      <input type="text" placeholder="الاسم" required>
-      <input type="email" placeholder="البريد الإلكتروني" required>
-      <textarea placeholder="رسالتك" rows="4" required></textarea>
-      <button type="submit" class="btn subscribe">إرسال</button>
+      <input type="email" placeholder="أدخل بريدك الإلكتروني">
+      <button type="submit">اشترك الآن 🚀</button>
     </form>
-  </div>
-</main>
+  </section>
 
+  <section id="contact">
+    <h2>تواصل معنا 📞</h2>
+    <p>راسلني على البريد: <a href="mailto:info@yasserairobotics.com">info@yasserairobotics.com</a></p>
+    <p>أو عبر واتساب: <a href="https://wa.me/201040363927">📱 اضغط هنا</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Yasser AIRobotics - كل الحقوق محفوظة ⚡</p>
+  </footer>
+
+  <script>
+    // حركة بسيطة: رسالة ترحيب عند الضغط على العنوان
+    document.querySelector("header h1").onclick = () => {
+      alert("أهلاً بيك يا ياسر 👑🔥 في موقعك الجديد!");
+    };
+  </script>
+</body>
+</html>
