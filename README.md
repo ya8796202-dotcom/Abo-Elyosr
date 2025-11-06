@@ -247,4 +247,9 @@
     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
   </iframe>
 </section>
+<section id="photo">
+  <h2>ابتسامة المستقبل 🤖✨</h2>
+  <img src="attachments/VJid5MBK7GbxZLesLPZoD.jpeg" alt="طفل مبتسم" width="400">
+  <p>لحظة مبهجة من الحياة اليومية، بتعبر عن البساطة والطاقة الإيجابية 💙</p>
+</section>
 
