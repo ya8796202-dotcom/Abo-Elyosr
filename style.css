@@ -31,6 +31,10 @@ nav a {
   border-radius: 999px;
   transition: background .2s, transform .2s;
 }
+header h1 {
+  color: #222; /* أو أي لون يناسب الخلفية */
+}
+
 nav a:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
 
 /* الأقسام */
