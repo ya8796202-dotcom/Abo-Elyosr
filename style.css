@@ -19,15 +19,11 @@ html, body {
 }
 
 /* الهيدر */
-header {
+  header {
   background: linear-gradient(90deg, var(--red), var(--green));
-  color: #fff;
-  padding: 16px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #222; /* رمادي غامق */
+}
+
 }
 header h1 { margin: 0; font-size: 24px; }
 nav { margin-top: 8px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
