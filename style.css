@@ -1,4 +1,4 @@
-:root {
+٠:root {
   --red: #d40000;       /* أحمر */
   --green: #00FF00;     /* أخضر براق */
   --bg: #f0fff4;        /* خلفية فاتحة مائلة للأخضر */
@@ -129,7 +129,34 @@ p.lead { color: var(--muted); margin: 4px 0 14px; }
 
 /* الفوتر */
 footer { background: #222; color: #fff; text-align: center; padding: 12px; margin-top: 24px; }
+/* قسم الصورة */
+#photo {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 22px;
+  margin: 20px auto;
+  width: min(1000px, 92%);
+  text-align: center;
+}
 
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.main-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease;
+}
+
+.main-photo:hover {
+  transform: scale(1.03);
+}
 
 
 
