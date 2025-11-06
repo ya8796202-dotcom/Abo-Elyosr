@@ -81,6 +81,18 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   background-repeat: repeat;
 }
+.testimonial {
+  background: #f1f1f1;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 8px;
+  font-style: italic;
+  width: 80%;
+}
+article.card {
+  margin: 10px auto;
+}
+
 
 
 
