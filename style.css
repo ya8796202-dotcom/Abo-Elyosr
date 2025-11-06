@@ -189,6 +189,21 @@ footer { background: #222; color: #fff; text-align: center; padding: 12px; margi
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+header {
+  display: flex;              /* نخلي الهيدر يستخدم Flexbox */
+  justify-content: center;    /* يوسّط النص أفقيًا */
+  align-items: center;        /* يوسّط النص عموديًا */
+  height: 200px;              /* ارتفاع الهيدر */
+  background: linear-gradient(90deg, var(--red), var(--green));
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
 
 
 
