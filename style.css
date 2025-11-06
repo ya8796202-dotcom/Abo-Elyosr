@@ -142,4 +142,54 @@ footer {
 #photo img:hover {
   transform: scale(1.05);
 }
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(90deg, #d40000, #ff6600); /* أحمر + برتقالي */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* الأقسام */
+section {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* الإطار */
+}
+
+section h2 {
+  color: #d40000;
+  margin-bottom: 20px;
+}
+
 
