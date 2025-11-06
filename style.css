@@ -17,13 +17,9 @@ html, body {
   background: linear-gradient(135deg, #e6ffe6, #ccffcc); /* خلفية متدرجة خضراء فاتحة */
   color: var(--text);
 }
-
-/* الهيدر */
-  header {
+header {
   background: linear-gradient(90deg, var(--red), var(--green));
-  color: #222; /* رمادي غامق */
-}
-
+  color: #006400;
 }
 header h1 { margin: 0; font-size: 24px; }
 nav { margin-top: 8px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
