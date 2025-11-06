@@ -1,1 +1,123 @@
+/* إعدادات عامة */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background: linear-gradient(135deg, #dfffe0, #f0fff4);
+  color: #222;
+  line-height: 1.6;
+  animation: fadeIn 1.5s ease-in;
+}
 
+/* رأس الصفحة */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+  background: #ffc8d8;
+  animation: slideDown 1.2s ease-out;
+}
+.hero-title {
+  margin: 0;
+  padding: 20px 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  background: #fff;
+  border: 3px solid #ffc8d8;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: pulseText 2s infinite;
+}
+
+/* البراويز */
+.card {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1.5s ease;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+/* الأزرار */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn.subscribe {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  animation: pulse 2s infinite;
+}
+.btn.contact {
+  background: linear-gradient(135deg, #ff5c6f, #e63946);
+  animation: bounce 2s infinite;
+}
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* الفيديو */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+.video-container::before { content: ""; display: block; padding-top: 56.25%; }
+.video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* معرض الصور */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* جدول الخدمات */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+table th {
+  background: #f0fff4;
+  font-weight: bold;
+}
+
+/* فريق العمل */
+.team-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap
