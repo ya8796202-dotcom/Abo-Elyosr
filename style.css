@@ -78,7 +78,11 @@ p.lead { color: var(--muted); margin: 4px 0 14px; }
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 16px; border-radius: 999px; border: none;
   cursor: pointer; font-weight: bold;
-  color: #fff; background: var(--green);
+  color: #fff; 
+  background: var(--green);
+  color: #222; /* رمادي غامق */
+}
+;
   box-shadow: 0 8px 18px rgba(0,255,0,0.35);
   transition: transform .15s, box-shadow .15s;
 }
