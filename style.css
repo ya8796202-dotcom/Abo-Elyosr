@@ -1,0 +1,125 @@
+/* إعدادات عامة */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(90deg, #d40000, #ff6600);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* الأقسام */
+section {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #d40000;
+  margin-bottom: 20px;
+}
+
+/* القوائم */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* معرض الصور */
+#gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+#gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* الفريق */
+#team ul li {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* آراء العملاء */
+.testimonial {
+  background: #f0f0f0;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 8px;
+  width: 70%;
+  font-style: italic;
+}
+
+/* نموذج الاشتراك */
+#newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#newsletter input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+#newsletter button {
+  background: #d40000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#newsletter button:hover {
+  background: #ff6600;
+}
+
+/* الفوتر */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
