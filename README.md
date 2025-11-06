@@ -5,6 +5,8 @@
   <title>موقعي الجديد</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <link rel="stylesheet" href="style.css">
+
 <body>
   <header>
     <h1>أهلاً بيك في موقعي الجديد 🚀</h1>
