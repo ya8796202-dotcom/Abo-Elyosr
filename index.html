@@ -51,4 +51,31 @@
 
 </body>
 </html>
+<script>
+  // تأثير دخول العناصر عند التمرير
+  const cards = document.querySelectorAll('.card');
+  const options = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, options);
+
+  cards.forEach(card => {
+    observer.observe(card);
+  });
+
+  // تفاعل عند الضغط على الأزرار
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.add('clicked');
+      setTimeout(() => btn.classList.remove('clicked'), 300);
+    });
+  });
+</script>
 
