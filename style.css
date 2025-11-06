@@ -36,6 +36,9 @@ header h1 {
 }
 
 nav a:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
+header h1 {
+  text-align: center;   /* يخلي النص في الوسط */
+}
 
 /* الأقسام */
 section {
