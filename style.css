@@ -1,201 +1,95 @@
-  ٠root {
-  --red: #003366;       /* أزرق غامق */
-  --green: #3399ff;     /* أزرق فاتح */
-  --bg: #f4f6f8;        /* رمادي فاتح */
-  --text: #222;         /* رمادي غامق */
+/* =========================
+   الألوان الأساسية (Theme)
+   ========================= */
+:root {
+  --bg: #dfffe0;       /* أخضر فاتح للخلفية */
+  --text: #222;        /* نص غامق */
+  --btn-green: #4CAF50;/* أخضر للأزرار */
+  --btn-red: #e63946;  /* أحمر للأزرار */
+  --pink: #ffc0cb;     /* وردي */
   --card: #fff;
-  --muted: #555;
+  --muted: #666;
 }
 
-/* إعدادات عامة */
-* { box-sizing: border-box; }
-html, body {
+/* =========================
+   إعدادات عامة
+   ========================= */
+body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, "Cairo", sans-serif;
-  line-height: 1.8;
-  background: linear-gradient(135deg, #e6ffe6, #ccffcc); /* خلفية متدرجة خضراء فاتحة */
+  font-family: "Tahoma", sans-serif;
+  background: var(--bg);
   color: var(--text);
 }
+
+/* =========================
+   رأس الصفحة (Header)
+   ========================= */
 header {
-  background: linear-gradient(90deg, var(--red), var(--green));
-  color: #006400;
-}
-header h1 { margin: 0; font-size: 24px; }
-nav { margin-top: 8px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 6px 10px;
-  border-radius: 999px;
-  transition: background .2s, transform .2s;
-}
-header h1 {
-  color: #222; /* أو أي لون يناسب الخلفية */
-}
-
-nav a:hover { background: rgba(255,255,255,0.18); transform: translateY(-1px); }
-header h1 {
-  text-align: center;   /* يخلي النص في الوسط */
-}
-
-/* الأقسام */
-section {
-  width: min(1000px, 92%);
-  margin: 20px auto;
-  background: var(--card);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 22px;
-  text-align: center;
-}
-section h2 { color: var(--red); margin: 0 0 10px; font-size: 22px; }
-p.lead { color: var(--muted); margin: 4px 0 14px; }
-
-/* كروت */
-.list { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; text-align: start; }
-.card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 14px;
-  transition: transform .2s, box-shadow .2s;
-}
-.card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
-.card h3 { margin: 0 0 6px; color: #222; font-size: 17px; }
-.meta { color: #888; font-size: 13px; }
-
-/* المعرض */
-.gallery { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.gallery img {
-  width: 220px; height: 140px; object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-  transition: transform .25s;
-}
-.gallery img:hover { transform: scale(1.05); }
-
-/* الأزرار */
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 16px; border-radius: 999px; border: none;
-  cursor: pointer; font-weight: bold;
-  color: #fff; 
-  background: var(--green);
-  color: #222; /* رمادي غامق */
-}
-;
-  box-shadow: 0 8px 18px rgba(0,255,0,0.35);
-  transition: transform .15s, box-shadow .15s;
-}
-.btn:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,255,0,0.45); }
-.btn.secondary { background: var(--red); }
-
-/* شريط التقدم */
-.progress-wrap { width: 100%; background: #eee; border-radius: 999px; overflow: hidden; height: 10px; margin: 8px 0; }
-.progress { height: 100%; background: linear-gradient(90deg, var(--red), var(--green)); width: 0%; transition: width 1s ease; }
-
-/* تأثير الظهور */
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.show { opacity: 1; transform: translateY(0); }
-
-/* قسم الفيديو */
-#video {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 22px;
-  margin: 20px auto;
-  width: min(1000px, 92%);
-  text-align: center;
-}
-#video h2 { color: var(--red); margin-bottom: 10px; }
-#video p.lead { color: var(--muted); margin-bottom: 16px; }
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* نسبة 16:9 */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-}
-.video-container iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* الفوتر */
-footer { background: #222; color: #fff; text-align: center; padding: 12px; margin-top: 24px; }
-/* قسم الصورة */
-#photo {
-  background: var(--card);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 22px;
-  margin: 20px auto;
-  width: min(1000px, 92%);
-  text-align: center;
-}
-
-.image-box {
   display: flex;
-  justify-content: center;
-  margin-top: 16px;
+  justify-content: center;   /* أفقي */
+  align-items: center;       /* عمودي */
+  height: 180px;
+  background: var(--pink);   /* خلفية وردية */
 }
 
-.main-photo {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 16px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-  transition: transform 0.3s ease;
+header h1 {
+  margin: 0;
+  padding: 20px 40px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text);
+  background: #fff;          /* إطار أبيض */
+  border: 3px solid var(--pink);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
-.main-photo:hover {
-  transform: scale(1.03);
+/* =========================
+   الأزرار
+   ========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* زر الاشتراك */
 .btn.subscribe {
-  background: var(--green);
-  color: #222;
-  font-weight: bold;
-  animation: pulse 2s infinite; /* تأثير نبض */
+  background: var(--btn-green);
+  color: #fff;
+  animation: pulse 2s infinite;
 }
 
 /* زر تواصل الآن */
 .btn.contact {
-  background: var(--red);
+  background: var(--btn-red);
   color: #fff;
-  font-weight: bold;
-  animation: bounce 2s infinite; /* تأثير قفز */
+  animation: bounce 2s infinite;
 }
 
-/* تأثير النبض */
+/* تأثير Hover */
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   الحركات (Animations)
+   ========================= */
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,255,0,0.7); }
-  50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(0,255,0,0.7); }
-  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,255,0,0.7); }
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(76,175,80,0.6); }
+  50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(76,175,80,0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(76,175,80,0.6); }
 }
 
-/* تأثير القفز */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-header {
-  display: flex;              /* نخلي الهيدر يستخدم Flexbox */
-  justify-content: center;    /* يوسّط النص أفقيًا */
-  align-items: center;        /* يوسّط النص عموديًا */
-  height: 200px;              /* ارتفاع الهيدر */
-  background: linear-gradient(90deg, var(--red), var(--green));
-  color: #fff;
-  text-align: center;
-}
-
