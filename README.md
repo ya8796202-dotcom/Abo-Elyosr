@@ -13,17 +13,11 @@
       line-height: 1.8;
     }
 
-    /* الهيدر */
     header {
       background: linear-gradient(90deg, #d40000, #ff6600);
       color: #fff;
       padding: 20px;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
     }
 
     nav a {
@@ -33,11 +27,6 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* الأقسام */
     section {
       padding: 40px;
       text-align: center;
@@ -53,7 +42,6 @@
       margin-bottom: 20px;
     }
 
-    /* معرض الصور */
     .gallery {
       display: flex;
       justify-content: center;
@@ -72,7 +60,6 @@
       transform: scale(1.05);
     }
 
-    /* آراء العملاء */
     .testimonial {
       background: #f1f1f1;
       padding: 15px;
@@ -81,13 +68,30 @@
       font-style: italic;
     }
 
-    /* الفوتر */
     footer {
       background: #222;
       color: #fff;
       text-align: center;
       padding: 15px;
       margin-top: 30px;
+    }
+
+    form input, form button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #d40000;
     }
   </style>
 </head>
@@ -98,7 +102,11 @@
       <a href="#about">من نحن</a>
       <a href="#services">الخدمات</a>
       <a href="#gallery">المعرض</a>
-      <a href="#testimonials">آراء العملاء</a>
+      <a href="#team">الفريق</a>
+      <a href="#features">المميزات</a>
+      <a href="#blog">المدونة</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#newsletter">النشرة البريدية</a>
       <a href="#contact">تواصل معنا</a>
     </nav>
   </header>
@@ -126,11 +134,59 @@
     </div>
   </section>
 
-  <section id="testimonials">
-    <h2>آراء العملاء 💬</h2>
-    <div class="testimonial">"أفضل تجربة مع روبوتات ياسر، فعلاً ذكية وسهلة الاستخدام!" 😍</div>
-    <div class="testimonial">"باور سبلاي ممتاز، أنقذني في مشروعي الإلكتروني." ⚡</div>
-    <div class="testimonial">"موقع احترافي وخدمة رائعة، أنصح الجميع بالتجربة." 👍</div>
+  <section id="team">
+    <h2>الفريق 👨‍💻👩‍💻</h2>
+    <ul>
+      <li>ياسر – قائد المشاريع 🚀</li>
+      <li>أحمد – مبرمج الأنظمة 🔧</li>
+      <li>سارة – مصممة جرافيك 🎨</li>
+    </ul>
+  </section>
+
+  <section id="features">
+    <h2>المميزات 🌟</h2>
+    <ul>
+      <li>تصميم عصري وجذاب ✨</li>
+      <li>سهولة الاستخدام 🖱️</li>
+      <li>دعم متعدد اللغات 🌍</li>
+      <li>توافق مع جميع الأجهزة 📱💻</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>المدونة 📝</h2>
+    <article>
+      <h3>كيف تبدأ مشروع روبوت بسيط 🤖</h3>
+      <p>ابدأ باستخدام Arduino وبعض الحساسات، وطور روبوت يتفاعل مع البيئة المحيطة.</p>
+    </article>
+    <article>
+      <h3>أفضل طرق لتوفير الطاقة 🔋</h3>
+      <p>استخدم مصادر طاقة بديلة مثل الألواح الشمسية لتقليل التكلفة وزيادة الكفاءة.</p>
+    </article>
+  </section>
+
+  <section id="faq">
+    <h2>الأسئلة الشائعة ❓</h2>
+    <details>
+      <summary>هل يمكن شراء المنتجات أونلاين؟ 🛒</summary>
+      <p>نعم، قريباً سيتم إطلاق متجر إلكتروني خاص بنا.</p>
+    </details>
+    <details>
+      <summary>هل تدعمون الشحن الدولي؟ 🌍</summary>
+      <p>حالياً داخل مصر فقط، لكن نخطط للتوسع قريباً.</p>
+    </details>
+    <details>
+      <summary>هل يمكنني تجربة الروبوت قبل الشراء؟ 🤖</summary>
+      <p>نعم، لدينا عروض تجريبية في المعارض المحلية.</p>
+    </details>
+  </section>
+
+  <section id="newsletter">
+    <h2>النشرة البريدية 📧</h2>
+    <form>
+      <input type="email" placeholder="أدخل بريدك الإلكتروني">
+      <button type="submit">اشترك الآن 🚀</button>
+    </form>
   </section>
 
   <section id="contact">
@@ -151,6 +207,7 @@
   </script>
 </body>
 </html>
+
 
 
 
