@@ -97,3 +97,35 @@ textarea { resize: vertical; }
 .check { list-style: none; padding: 0; }
 .check li { position: relative; padding-right: 22px; margin: 6px 0; }
 .check li::before { content: "✔"; position: absolute; right: 0; color: #2ecc71; }
+.buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* زر الاشتراك */
+.btn-green {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* زر واتساب */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
