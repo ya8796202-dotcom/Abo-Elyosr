@@ -1,8 +1,2 @@
-/* تأثيرات إضافية خفيفة للأزرار والعناصر */
-nav a{transition:transform .2s}
-nav a:hover{transform:translateY(-1px)}
-
-.card{transition:transform .2s, box-shadow .2s}
-.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.12)}
 
 
