@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
+  <link rel="stylesheet" href="style.css">
+
   <meta charset="UTF-8">
   <title>موقعي الجديد</title>
   <link rel="stylesheet" href="style.css">
