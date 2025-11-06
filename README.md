@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="style.css">
 
 <body>
+  <script src="script.js"></script>
+
   <header>
     <h1>أهلاً بيك في موقعي الجديد 🚀</h1>
     <nav>
