@@ -6,7 +6,6 @@ body {
   line-height: 1.8;
   background: linear-gradient(135deg, #ff6600, #d40000); /* برتقالي + أحمر */
 }
-
 :root{
   --red:#d40000; --orange:#ff6600; --bg:#f7f7f7; --text:#333; --card:#fff; --muted:#666;
 }
