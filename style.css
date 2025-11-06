@@ -7,8 +7,14 @@ body {
   background: linear-gradient(135deg, #ff6600, #d40000); /* برتقالي + أحمر */
 }
 :root{
-  --red:#d40000; --orange:#ff6600; --bg:#f7f7f7; --text:#333; --card:#fff; --muted:#666;
+  --red:#d40000; 
+  --orange:#00FF00; /* أخضر براق */
+  --bg:#f7f7f7; 
+  --text:#333; 
+  --card:#fff; 
+  --muted:#666;
 }
+
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: Arial,"Cairo",sans-serif;line-height:1.8}
 
