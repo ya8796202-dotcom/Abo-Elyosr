@@ -1,113 +1,37 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <title>موقعي الجديد</title>
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.8;
-    }
-
-    header {
-      background: linear-gradient(90deg, #d40000, #ff6600);
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px;
-      text-align: center;
-      background: #fff;
-      margin: 20px auto;
-      width: 80%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    section h2 {
-      color: #d40000;
-      margin-bottom: 20px;
-    }
-
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .gallery img {
-      width: 200px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .testimonial {
-      background: #f1f1f1;
-      padding: 15px;
-      margin: 10px;
-      border-radius: 8px;
-      font-style: italic;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-
-    form input, form button {
-      padding: 10px;
-      margin: 5px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #ff6600;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #d40000;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; line-height: 1.8; }
+    header { background: linear-gradient(90deg, #d40000, #ff6600); color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    section { width: 80%; margin: 20px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 30px; text-align: center; }
+    section h2 { color: #d40000; margin-bottom: 16px; }
+    .gallery { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .gallery img { width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform .3s; }
+    .gallery img:hover { transform: scale(1.05); }
+    .testimonial { background: #f1f1f1; padding: 12px 16px; border-radius: 8px; margin: 8px 0; font-style: italic; }
+    form input, form button { padding: 10px; margin: 5px; border-radius: 6px; border: 1px solid #ccc; }
+    form button { background: #ff6600; color: #fff; border: none; cursor: pointer; }
+    form button:hover { background: #d40000; }
+    footer { background: #222; color: #fff; text-align: center; padding: 12px; margin-top: 30px; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>أهلاً بيك في موقعي الجديد 🚀</h1>
     <nav>
       <a href="#about">من نحن</a>
       <a href="#services">الخدمات</a>
       <a href="#gallery">المعرض</a>
-      <a href="#team">الفريق</a>
-      <a href="#features">المميزات</a>
-      <a href="#blog">المدونة</a>
-      <a href="#faq">الأسئلة الشائعة</a>
-      <a href="#newsletter">النشرة البريدية</a>
-      <a href="#contact">تواصل معنا</a>
+      <a href="#testimonials">آراء العملاء</a>
+      <a href="#faq">الأسئلة</a>
+      <a href="#newsletter">النشرة</a>
+      <a href="#contact">تواصل</a>
     </nav>
   </header>
 
@@ -118,7 +42,7 @@
 
   <section id="services">
     <h2>الخدمات ⚙️</h2>
-    <ul>
+    <ul style="list-style:none; padding:0;">
       <li>تصميم دوائر إلكترونية 🔌</li>
       <li>برمجة روبوتات ذكية 🤖</li>
       <li>تطوير مواقع ويب 🌐</li>
@@ -134,77 +58,37 @@
     </div>
   </section>
 
-  <section id="team">
-    <h2>الفريق 👨‍💻👩‍💻</h2>
-    <ul>
-      <li>ياسر – قائد المشاريع 🚀</li>
-      <li>أحمد – مبرمج الأنظمة 🔧</li>
-      <li>سارة – مصممة جرافيك 🎨</li>
-    </ul>
-  </section>
-
-  <section id="features">
-    <h2>المميزات 🌟</h2>
-    <ul>
-      <li>تصميم عصري وجذاب ✨</li>
-      <li>سهولة الاستخدام 🖱️</li>
-      <li>دعم متعدد اللغات 🌍</li>
-      <li>توافق مع جميع الأجهزة 📱💻</li>
-    </ul>
-  </section>
-
-  <section id="blog">
-    <h2>المدونة 📝</h2>
-    <article>
-      <h3>كيف تبدأ مشروع روبوت بسيط 🤖</h3>
-      <p>ابدأ باستخدام Arduino وبعض الحساسات، وطور روبوت يتفاعل مع البيئة المحيطة.</p>
-    </article>
-    <article>
-      <h3>أفضل طرق لتوفير الطاقة 🔋</h3>
-      <p>استخدم مصادر طاقة بديلة مثل الألواح الشمسية لتقليل التكلفة وزيادة الكفاءة.</p>
-    </article>
+  <section id="testimonials">
+    <h2>آراء العملاء 💬</h2>
+    <div class="testimonial">"أفضل تجربة مع روبوتات ياسر!" 😍</div>
+    <div class="testimonial">"باور سبلاي ممتاز." ⚡</div>
+    <div class="testimonial">"موقع احترافي." 👍</div>
   </section>
 
   <section id="faq">
     <h2>الأسئلة الشائعة ❓</h2>
-    <details>
-      <summary>هل يمكن شراء المنتجات أونلاين؟ 🛒</summary>
-      <p>نعم، قريباً سيتم إطلاق متجر إلكتروني خاص بنا.</p>
-    </details>
-    <details>
-      <summary>هل تدعمون الشحن الدولي؟ 🌍</summary>
-      <p>حالياً داخل مصر فقط، لكن نخطط للتوسع قريباً.</p>
-    </details>
-    <details>
-      <summary>هل يمكنني تجربة الروبوت قبل الشراء؟ 🤖</summary>
-      <p>نعم، لدينا عروض تجريبية في المعارض المحلية.</p>
-    </details>
+    <details><summary>هل يمكن شراء المنتجات أونلاين؟ 🛒</summary><p>قريبًا إطلاق متجر إلكتروني.</p></details>
+    <details><summary>هل تدعمون الشحن الدولي؟ 🌍</summary><p>حاليًا داخل مصر، والتوسع قريبًا.</p></details>
   </section>
 
   <section id="newsletter">
     <h2>النشرة البريدية 📧</h2>
-    <form>
-      <input type="email" placeholder="أدخل بريدك الإلكتروني">
+    <form onsubmit="event.preventDefault(); alert('تم الاشتراك بنجاح ✅');">
+      <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
       <button type="submit">اشترك الآن 🚀</button>
     </form>
   </section>
 
   <section id="contact">
     <h2>تواصل معنا 📞</h2>
-    <p>راسلني على البريد: <a href="mailto:info@yasserairobotics.com">info@yasserairobotics.com</a></p>
-    <p>أو عبر واتساب: <a href="https://wa.me/201040363927">📱 اضغط هنا</a></p>
+    <p>راسلني: <a href="mailto:info@yasserairobotics.com">info@yasserairobotics.com</a></p>
+    <p>واتساب: <a href="https://wa.me/201040363927">📱 اضغط هنا</a></p>
   </section>
 
   <footer>
     <p>© 2025 Yasser AIRobotics - كل الحقوق محفوظة ⚡</p>
   </footer>
 
-  <script>
-    // حركة بسيطة: رسالة ترحيب عند الضغط على العنوان
-    document.querySelector("header h1").onclick = () => {
-      alert("أهلاً بيك يا ياسر 👑🔥 في موقعك الجديد!");
-    };
-  </script>
 </body>
 </html>
 
