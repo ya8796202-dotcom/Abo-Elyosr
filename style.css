@@ -1,149 +1,124 @@
 /* =========================
-   Reset بسيط وتحسين الخط
+   إعدادات عامة
    ========================= */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
 body {
-  font-family: "Tahoma", Arial, sans-serif;
-  background: #e9ffef;          /* خلفية خضراء فاتحة نسبياً */
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background: linear-gradient(135deg, #dfffe0, #f0fff4); /* خلفية متدرجة خضراء فاتحة */
   color: #222;
   line-height: 1.6;
+  animation: fadeIn 1.5s ease-in; /* دخول ناعم */
 }
 
 /* =========================
-   ألوان ومتغيرات عامة
-   ========================= */
-:root {
-  --bg: #e9ffef;                /* أخضر فاتح */
-  --text: #222;                 /* نص أساسي */
-  --muted: #666;                /* نص ثانوي */
-  --pink: #ffc8d8;              /* وردي ناعم للخلفيات */
-  --frame: #ffffff;             /* لون إطار العنوان */
-  --btn-green: #28a745;         /* أخضر للأزرار */
-  --btn-red: #e63946;           /* أحمر للأزرار */
-  --shadow: rgba(0,0,0,0.15);   /* ظل عام */
-}
-
-/* تأكيد الخلفية العامة لو فيه ستايلات قديمة */
-body { background: var(--bg); }
-
-/* =========================
-   رأس الصفحة: عنوان في المنتصف داخل إطار وردي
+   رأس الصفحة
    ========================= */
 header {
   display: flex;
-  justify-content: center;      /* توسيط أفقي */
-  align-items: center;          /* توسيط عمودي */
+  justify-content: center;
+  align-items: center;
   min-height: 180px;
-  padding: 20px;
-  background: var(--pink);      /* خلفية وردية للهيدر */
+  background: #ffc8d8; /* خلفية وردية */
+  animation: slideDown 1.2s ease-out;
 }
 
-header .hero-title {
+header h1 {
   margin: 0;
-  padding: 18px 32px;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--text);
-  background: var(--frame);     /* إطار أبيض خلف النص */
-  border: 3px solid var(--pink);
+  padding: 20px 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  background: #fff;
+  border: 3px solid #ffc8d8;
   border-radius: 14px;
-  box-shadow: 0 8px 20px var(--shadow);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   text-align: center;
+  animation: pulseText 2s infinite;
 }
 
 /* =========================
-   منطقة المحتوى الرئيسية
+   البراويز (Cards)
    ========================= */
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 30px 16px;
-  text-align: center;
+.card {
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
 }
 
 /* =========================
-   الأزرار مع تأثيرات متحركة
+   الأزرار
    ========================= */
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  margin: 10px 8px;
+  margin: 10px;
   font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-  box-shadow: 0 6px 16px var(--shadow);
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* زر الاشتراك: نبض */
 .btn.subscribe {
-  background: linear-gradient(135deg, #2ecc71, var(--btn-green));
-  animation: pulse 2.2s infinite;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  animation: pulse 2s infinite;
 }
 
-/* زر التواصل الآن: قفز */
 .btn.contact {
-  background: linear-gradient(135deg, #ff5c6f, var(--btn-red));
+  background: linear-gradient(135deg, #ff5c6f, #e63946);
   animation: bounce 2s infinite;
 }
 
-/* تأثير تمرير عام */
 .btn:hover {
-  transform: translateY(-2px) scale(1.04);
-  filter: brightness(1.06);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 /* =========================
    الحركات (Animations)
    ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes pulse {
-  0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.0); }
-  40%  { transform: scale(1.06); box-shadow: 0 0 24px 8px rgba(46, 204, 113, 0.28); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.0); }
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(46,204,113,0.0); }
+  50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(46,204,113,0.4); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(46,204,113,0.0); }
 }
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
 }
 
-/* =========================
-   فيديو يوتيوب متجاوب (اختياري)
-   ========================= */
-.video-container {
-  position: relative;
-  width: min(1000px, 92%);
-  margin: 22px auto;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 28px var(--shadow);
-}
-.video-container::before { content: ""; display: block; padding-top: 56.25%; }
-.video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-
-/* عنوان ووصف لقسم الفيديو (اختياري) */
-.section-title {
-  font-size: 22px;
-  margin: 8px 0 6px;
-  color: var(--text);
-}
-.section-lead {
-  font-size: 15px;
-  color: var(--muted);
-  margin: 0 0 14px;
+@keyframes pulseText {
+  0%, 100% { color: #222; }
+  50% { color: #e63946; }
 }
 
-/* =========================
-   دعم بسيط للوضع الداكن (لو استخدمت .dark على body)
-   ========================= */
-.dark body { background: #101416; color: #eaeaea; }
-.dark header { background: #2a2a2a; }
-.dark header .hero-title { background: #1c1c1c; color: #eee; border-color: #3a3a3a; }
-.dark .video-container { background: #1a1a1a; box-shadow: 0 10px 28px rgba(0,0,0,0.45); }
