@@ -249,7 +249,7 @@
 </section>
 <section id="photo">
   <h2>ابتسامة المستقبل 🤖✨</h2>
-  <img src="attachments/VJid5MBK7GbxZLesLPZoD.jpeg" alt="طفل مبتسم" width="400">
+  <img src="421548824_385788347327472060690763301374802.n.jpg" alt="طفل مبتسم" width="400">
   <p>لحظة مبهجة من الحياة اليومية، بتعبر عن البساطة والطاقة الإيجابية 💙</p>
 </section>
 
