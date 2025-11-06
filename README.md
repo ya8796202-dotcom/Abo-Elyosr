@@ -24,7 +24,7 @@
 
   <section id="about">
     <h2>من نحن</h2>
-    <p>هذا الموقع مخصص لعرض أعمالي ومشاريعي في الإلكترونيات والروبوتات.</p>
+    <p>هذا الموقع مخصص لعرض أعمالي ومشاريعي في الإلكترونيات والروبوتات الذكيه الذي صنعها المهندس ياسر احمد حمدي عراقي محمد منصور.</p>
   </section>
 
   <section id="services">
@@ -93,7 +93,7 @@
   <section id="contact">
     <h2>تواصل معنا 📞</h2>
     <p>راسلني على البريد: <a href="mailto:info@yasserairobotics.com">info@yasserairobotics.com</a></p>
-    <p>أو عبر واتساب: <a href="https://wa.me/201234567890">📱 اضغط هنا</a></p>
+    <p>أو عبر واتساب: <a href="https://wa.me/01040363927">📱 اضغط هنا</a></p>
   </section>
 
   <footer>
