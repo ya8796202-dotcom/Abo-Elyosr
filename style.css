@@ -62,6 +62,11 @@ p.lead{color:var(--muted);margin:4px 0 14px}
 }
 .subscribe.flash{animation:flash .6s}
 @keyframes flash{0%{filter:brightness(1)}20%{filter:brightness(1.18)}100%{filter:brightness(1)}}
+body {
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-repeat: repeat;
+}
+
 
 
 
