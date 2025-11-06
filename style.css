@@ -1,211 +1,67 @@
-/* إعدادات عامة */
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: "Tahoma", sans-serif;
-  background: linear-gradient(135deg, #dfffe0, #f0fff4);
-  color: #222;
-  animation: fadeIn 1.5s ease-in;
-}
-
-/* رأس الصفحة */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 180px;
-  background: #ffc8d8;
-  animation: slideDown 1.2s ease-out;
-}
-.hero-title {
-  margin: 0;
-  padding: 20px 40px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #222;
-  background: #fff;
-  border: 3px solid #ffc8d8;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  text-align: center;
-  animation: pulseText 2s infinite;
-}
-
-/* البراويز */
-.card {
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeUp 1.5s ease;
-}
-.card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
-}
-
-/* الفيديو */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-}
-.video-container iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* الأزرار */
-.buttons {
-  text-align: center;
-  margin: 30px 0;
-}
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.subscribe {
-  background: linear-gradient(135deg, #2ecc71, #27ae60);
-  animation: pulse 2s infinite;
-}
-.contact {
-  background: linear-gradient(135deg, #ff5c6f, #e63946);
-  animation: bounce 2s infinite;
-}
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* الفوتر */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
-  font-size: 14px;
-  color: #555;
-}
-
-/* الحركات */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
-}
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-@keyframes pulseText {
-  0%,100% { color: #222; }
-  50% { color: #e63946; }
-}
-/* كلاس يظهر عند التمرير */
-.card {
+/* حركة دخول عامة لكل العناصر */
+.card, .hero-title, .btn, .video-container {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.6s ease;
+  animation: fadeSlideUp 1s forwards;
 }
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+.card:nth-child(4) { animation-delay: 1.2s; }
+.video-container { animation-delay: 1.5s; }
+
+/* حركة دخول */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* تأثير عند الضغط على الزر */
-.btn.clicked {
-  transform: scale(0.95);
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+/* تأثير Hover للبطاقات */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
 }
 
-/* حركة للفوتر */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(90deg, #dfffe0, #ffc8d8);
-  font-size: 14px;
-  color: #555;
-  animation: fadeInFooter 2s ease;
+/* الأزرار مع خلفية متغيرة */
+.btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(270deg, #27ae60, #2ecc71, #27ae60);
+  background-size: 600% 600%;
+  animation: gradientMove 6s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@keyframes fadeInFooter {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.btn.contact {
+  background: linear-gradient(270deg, #e63946, #ff5c6f, #e63946);
+  background-size: 600% 600%;
+  animation: gradientMove 6s ease infinite;
 }
-/* آراء العملاء */
-.testimonials blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #27ae60;
-  margin: 10px 0;
-  padding: 10px 20px;
-  font-style: italic;
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-.testimonials cite {
-  display: block;
-  text-align: right;
-  font-size: 14px;
-  color: #555;
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
 
-/* الأسئلة الشائعة */
-.faq details {
-  margin: 10px 0;
-  padding: 10px;
-  background: #f0fff4;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.faq summary {
+/* نص الهيدر مع حركة كتابة */
+.hero-title {
+  font-size: 32px;
   font-weight: bold;
-  color: #27ae60;
+  color: #222;
+  border-right: 3px solid #e63946;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
 }
-.faq p {
-  margin: 8px 0 0;
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
-
-/* نموذج التواصل */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #e63946; }
 }
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
-}
-.contact-form button {
-  align-self: flex-start;
-}
-
-
