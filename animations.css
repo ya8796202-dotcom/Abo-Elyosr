@@ -1,0 +1,23 @@
+/* تأثير دخول الأقسام */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+/* لما القسم يظهر في الشاشة */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* زر الاشتراك */
+#newsletter button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); background-color: #ff6600; }
+  100% { transform: scale(1); }
+}
