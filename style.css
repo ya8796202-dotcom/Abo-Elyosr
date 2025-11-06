@@ -1,67 +1,56 @@
-/* حركة دخول عامة لكل العناصر */
-.card, .hero-title, .btn, .video-container {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeSlideUp 1s forwards;
+:root{
+  --red:#d40000; --orange:#ff6600; --bg:#f7f7f7; --text:#333; --card:#fff; --muted:#666;
 }
-.card:nth-child(1) { animation-delay: 0.3s; }
-.card:nth-child(2) { animation-delay: 0.6s; }
-.card:nth-child(3) { animation-delay: 0.9s; }
-.card:nth-child(4) { animation-delay: 1.2s; }
-.video-container { animation-delay: 1.5s; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: Arial,"Cairo",sans-serif;line-height:1.8}
 
-/* حركة دخول */
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
+/* Header */
+header{background:linear-gradient(90deg,var(--red),var(--orange));color:#fff;padding:16px;text-align:center;position:sticky;top:0;z-index:10;box-shadow:0 6px 16px rgba(0,0,0,0.15)}
+header h1{margin:0;font-size:24px}
+nav{margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:bold;padding:6px 10px;border-radius:999px}
+nav a:hover{background:rgba(255,255,255,0.18)}
 
-/* تأثير Hover للبطاقات */
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.2);
-  transition: all 0.4s ease;
-}
+/* Sections */
+section{width:min(1000px,92%);margin:20px auto;background:var(--card);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,0.08);padding:22px;text-align:center}
+section h2{color:var(--red);margin:0 0 10px;font-size:22px}
+p.lead{color:var(--muted);margin:4px 0 14px}
 
-/* الأزرار مع خلفية متغيرة */
-.btn {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(270deg, #27ae60, #2ecc71, #27ae60);
-  background-size: 600% 600%;
-  animation: gradientMove 6s ease infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn.contact {
-  background: linear-gradient(270deg, #e63946, #ff5c6f, #e63946);
-  background-size: 600% 600%;
-  animation: gradientMove 6s ease infinite;
-}
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-}
+/* Cards */
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;text-align:start}
+.card{background:#fff;border:1px solid #eee;border-radius:12px;padding:14px}
+.card h3{margin:0 0 6px;color:#222;font-size:17px}
+.meta{color:#888;font-size:13px}
 
-/* نص الهيدر مع حركة كتابة */
-.hero-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #222;
-  border-right: 3px solid #e63946;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+/* Gallery */
+.gallery{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.gallery img{width:220px;height:140px;object-fit:cover;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.18);transition:transform .25s}
+.gallery img:hover{transform:scale(1.05)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:none;cursor:pointer;font-weight:bold;color:#fff;background:var(--orange);box-shadow:0 8px 18px rgba(255,102,0,0.35)}
+.btn.secondary{background:#222}
+
+/* Pulse */
+.pulse{animation:pulse 2s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+
+/* Progress bar */
+.progress-wrap{width:100%;background:#eee;border-radius:999px;overflow:hidden;height:10px;margin:8px 0}
+.progress{height:100%;background:linear-gradient(90deg,var(--red),var(--orange));width:0%}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+
+/* Subscribe message */
+.msg{margin-top:8px;color:green;display:none}
+
+/* Subscribe button flair */
+.subscribe{position:relative;overflow:hidden}
+.subscribe::after{
+  content:"";position:absolute;left:-40%;top:-40%;width:80%;height:80%;border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,0.6), transparent 60%);opacity:0
 }
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: #e63946; }
-}
+.subscribe.flash{animation:flash .6s}
+@keyframes flash{0%{filter:brightness(1)}20%{filter:brightness(1.18)}100%{filter:brightness(1)}}
