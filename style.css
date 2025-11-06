@@ -7,8 +7,8 @@ body {
   background: linear-gradient(135deg, #ff6600, #d40000); /* برتقالي + أحمر */
 }
 :root{
-  --red:#d40000; 
-  --orange:#00FF00; /* أخضر براق */
+  --blue:#d40000; 
+  --green:#00FF00; /* أخضر براق */
   --bg:#f7f7f7; 
   --text:#333; 
   --card:#fff; 
