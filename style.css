@@ -1,4 +1,4 @@
-:root {
+٠:root {
   --red: #003366;       /* أزرق غامق */
   --green: #3399ff;     /* أزرق فاتح */
   --bg: #f4f6f8;        /* رمادي فاتح */
@@ -202,6 +202,33 @@ header {
 header h1 {
   margin: 0;
   font-size: 28px;
+}
+/* حاوية الفيديو المتجاوبة بنسبة 16:9 */
+.video-container {
+  position: relative;
+  width: min(1000px, 92%);
+  margin: 20px auto;
+  border-radius: 14px;
+  overflow: hidden;                 /* علشان البوردر راديوس يشتغل مع الـ iframe */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  background: var(--card, #fff);
+}
+
+/* نسبة العرض إلى الارتفاع 16:9 */
+.video-container::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;              /* 9/16 = 0.5625 */
+}
+
+/* ضبط الـ iframe داخل الحاوية */
+.video-container iframe {
+  position: absolute;
+  inset: 0;                         /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 14px;
 }
 
 
