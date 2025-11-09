@@ -74,3 +74,55 @@
 
 </body>
 </html>
+
+<section class="card">
+  <h3>🔢 حاسبة السعرات اليومية</h3>
+  <label>الوزن (كجم):</label>
+  <input type="number" id="weight" placeholder="مثال: 75">
+  
+  <label>الطول (سم):</label>
+  <input type="number" id="height" placeholder="مثال: 175">
+  
+  <label>العمر (سنة):</label>
+  <input type="number" id="age" placeholder="مثال: 25">
+  
+  <label>مستوى النشاط:</label>
+  <select id="activity">
+    <option value="1.2">قليل جدًا</option>
+    <option value="1.375">خفيف</option>
+    <option value="1.55">متوسط</option>
+    <option value="1.725">عالي</option>
+    <option value="1.9">شديد جدًا</option>
+  </select>
+  
+  <button class="btn primary" onclick="calcCalories()">احسب</button>
+  
+  <div id="result" style="margin-top:15px;"></div>
+</section>
+
+<script>
+function calcCalories(){
+  const w = parseFloat(document.getElementById('weight').value);
+  const h = parseFloat(document.getElementById('height').value);
+  const a = parseFloat(document.getElementById('age').value);
+  const act = parseFloat(document.getElementById('activity').value);
+
+  if(!w || !h || !a){ alert("من فضلك أدخل كل البيانات"); return; }
+
+  // معادلة Mifflin-St Jeor
+  let bmr = (10*w) + (6.25*h) - (5*a) + 5; // للرجال
+  let calories = bmr * act;
+
+  // تقسيم الماكروز (مثال: 30% بروتين، 50% كارب، 20% دهون)
+  let protein = (calories * 0.3) / 4;
+  let carbs   = (calories * 0.5) / 4;
+  let fats    = (calories * 0.2) / 9;
+
+  document.getElementById('result').innerHTML = `
+    <p>🔥 السعرات اليومية: <strong>${Math.round(calories)}</strong> كالوري</p>
+    <p>💪 بروتين: <strong>${Math.round(protein)} جم</strong></p>
+    <p>🍚 كارب: <strong>${Math.round(carbs)} جم</strong></p>
+    <p>🥑 دهون: <strong>${Math.round(fats)} جم</strong></p>
+  `;
+}
+</script>
