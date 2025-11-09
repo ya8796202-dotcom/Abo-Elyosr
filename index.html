@@ -1,250 +1,79 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>موقع ياسر — إلكترونيات وبرمجة</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ربط ملفات CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="anim.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ياسر الرياضي — تمارين وتغذية ومتابعة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- شريط علوي -->
-  <nav class="topbar">
-    <div class="brand">Yasser Tech</div>
-    <ul class="menu">
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#services">الخدمات</a></li>
-      <li><a href="#projects">الأعمال</a></li>
-      <li><a href="#video">فيديو</a></li>
-      <li><a href="#gallery">المعرض</a></li>
-      <li><a href="#team">الفريق</a></li>
-      <li><a href="#pricing">الأسعار</a></li>
-      <li><a href="#faq">الأسئلة</a></li>
-      <li><a href="#contact">تواصل</a></li>
-    </ul>
-  </nav>
-
-  <!-- رأس الصفحة -->
-  <header class="hero section">
-    <div class="hero-box">
-      <h1 class="typing">مرحباً بكم في عالم ياسر — إلكترونيات، برمجة، وإبداع بلا حدود</h1>
-      <p class="lead">حلول عملية للأجهزة الذكية، مواقع ويب متقنة، وروبوتات تفاعلية جاهزة للسوق المحلي والعالمي.</p>
-      <div class="cta">
-        <a class="btn btn-green" href="#services">اكتشف خدماتنا</a>
-        <a class="btn btn-red" href="#contact">ابدأ مشروعك الآن</a>
+  <header class="site-header container">
+    <div class="brand">
+      <div class="logo">🛠️</div>
+      <div>
+        <div class="site-title">ياسر أحمد حمدي</div>
+        <div class="site-sub">موقع رياضي • نظام Push Pull Legs</div>
       </div>
     </div>
+    <nav class="main-nav" aria-label="القائمة الرئيسية">
+      <a href="index.html" class="nav-link">الرئيسية</a>
+      <a href="workouts.html" class="nav-link">التمارين</a>
+      <a href="progress.html" class="nav-link">المتابعة</a>
+      <a href="nutrition.html" class="nav-link">التغذية</a>
+      <a href="recovery.html" class="nav-link">الراحة</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- من نحن -->
-    <section id="about" class="section">
-      <div class="card">
-        <h2>من نحن</h2>
-        <p>نحن فريق يقوده ياسر من الإسكندرية، ندمج الإلكترونيات مع البرمجة لتقديم منتجات ذكية وعملية: مزودات طاقة، عربات روبوت، وحلول عرض تفاعلي.</p>
-        <ul class="check">
-          <li>خبرة فعلية في السوق المحلي</li>
-          <li>تصاميم قابلة للتطوير والتخصيص</li>
-          <li>توثيق إبداعي بالصور والفيديو والعلامة التجارية</li>
-        </ul>
+  <main class="container">
+    <section class="hero card">
+      <h1>ابدأ برنامج Push · Pull · Legs</h1>
+      <p class="muted">تمارين منظمة، تسجيل تلقائي لتقدمك، ونظام متابعة بسيط يساعدك تشوف النتائج.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="workouts.html">عرض التمارين</a>
+        <a class="btn" href="progress.html">شاهد تقدمك</a>
       </div>
     </section>
 
-    <!-- الخدمات -->
-    <section id="services" class="section">
-      <div class="card">
-        <h2>الخدمات</h2>
-        <div class="grid-3">
-          <div class="feature">
-            <h3>دوائر إلكترونية</h3>
-            <p>تصميم وPCB وتجميع عملي مع اختبار شامل.</p>
-          </div>
-          <div class="feature">
-            <h3>أنظمة مدمجة</h3>
-            <p>Arduino, ESP32, Raspberry Pi مع حساسات وشاشات.</p>
-          </div>
-          <div class="feature">
-            <h3>ويب وتطبيقات</h3>
-            <p>مواقع سريعة، أنيميشن احترافية، وربط API.</p>
-          </div>
-        </div>
-      </div>
+    <section class="grid">
+      <article class="card">
+        <h3>نظام التمرين</h3>
+        <p>Push (صدر/أكتاف/ترايسبس) · Pull (ظهر/بايسبس) · Legs (أرجل)</p>
+        <a class="btn" href="workouts.html">تفاصيل التمارين</a>
+      </article>
+
+      <article class="card">
+        <h3>التغذية</h3>
+        <p>خطط وجبات بسيطة قابلة للتعديل حسب هدفك (زيادة/نقصان وزن).</p>
+        <a class="btn" href="nutrition.html">خطط التغذية</a>
+      </article>
+
+      <article class="card">
+        <h3>الراحة والاستشفاء</h3>
+        <p>نصائح للنوم، إطالات، ويوم راحة فعال.</p>
+        <a class="btn" href="recovery.html">نصائح الراحة</a>
+      </article>
+
+      <article class="card">
+        <h3>المتابعة</h3>
+        <p>سجل وزنك وعدد التمارين وشاهد مخطط التقدم.</p>
+        <a class="btn" href="progress.html">سجل تقدمك</a>
+      </article>
     </section>
 
-    <!-- الأعمال السابقة -->
-    <section id="projects" class="section">
-      <div class="card">
-        <h2>أعمالنا السابقة</h2>
-        <div class="timeline">
-          <div class="item">
-            <span class="badge">2023</span>
-            <h4>روبوت استكشاف أرضي</h4>
-            <p>عربة ذكية بحساسات مسافة وشاشة عرض للمعلومات.</p>
-          </div>
-          <div class="item">
-            <span class="badge">2024</span>
-            <h4>مزود طاقة قابل للبرمجة</h4>
-            <p>توليد جهد ثابت مع حماية وواجهة مستخدم.</p>
-          </div>
-          <div class="item">
-            <span class="badge">2025</span>
-            <h4>لوحة عرض تفاعلية</h4>
-            <p>محتوى ديناميكي، تحكم عبر الويب، وتأثيرات انتقال.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- فيديو -->
-    <section id="video" class="section">
-      <div class="card">
-        <h2>فيديو تعريفي</h2>
-        <p class="muted">شاهد عرضاً سريعاً لأحد مشاريعنا.</p>
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/oTm3ViwnexA"
-            title="Yasser Tech Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- معرض الصور -->
-    <section id="gallery" class="section">
-      <div class="card">
-        <h2>معرض الصور</h2>
-        <div class="gallery-grid">
-          <img src="https://via.placeholder.com/320x200?text=Project+1" alt="مشروع 1">
-          <img src="https://via.placeholder.com/320x200?text=Project+2" alt="مشروع 2">
-          <img src="https://via.placeholder.com/320x200?text=Project+3" alt="مشروع 3">
-          <img src="https://via.placeholder.com/320x200?text=Project+4" alt="مشروع 4">
-          <img src="https://via.placeholder.com/320x200?text=Project+5" alt="مشروع 5">
-          <img src="https://via.placeholder.com/320x200?text=Project+6" alt="مشروع 6">
-        </div>
-      </div>
-    </section>
-
-    <!-- الفريق -->
-    <section id="team" class="section">
-      <div class="card">
-        <h2>فريق العمل</h2>
-        <div class="team-grid">
-          <div class="member">
-            <img src="https://via.placeholder.com/120" alt="Yasser">
-            <h3>ياسر</h3>
-            <p>قيادة المشاريع والإلكترونيات.</p>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/120" alt="Ahmed">
-            <h3>أحمد</h3>
-            <p>برمجة الأنظمة والواجهات.</p>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/120" alt="Sara">
-            <h3>سارة</h3>
-            <p>تصميم وتجربة المستخدم.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- الأسعار -->
-    <section id="pricing" class="section">
-      <div class="card">
-        <h2>الباقات والأسعار</h2>
-        <div class="pricing">
-          <div class="plan">
-            <h3>أساسي</h3>
-            <p class="price">ابتداءً من 1200</p>
-            <ul>
-              <li>مشروع صغير</li>
-              <li>توثيق بسيط</li>
-              <li>تسليم سريع</li>
-            </ul>
-            <a class="btn btn-green" href="#contact">اختيار</a>
-          </div>
-          <div class="plan featured">
-            <h3>احترافي</h3>
-            <p class="price">ابتداءً من 2800</p>
-            <ul>
-              <li>مشروع متوسط</li>
-              <li>توثيق فيديو وصور</li>
-              <li>دعم لمدة شهر</li>
-            </ul>
-            <a class="btn btn-red" href="#contact">اختيار</a>
-          </div>
-          <div class="plan">
-            <h3>مخصص</h3>
-            <p class="price">حسب الطلب</p>
-            <ul>
-              <li>حلول مخصصة</li>
-              <li>تصميم كامل</li>
-              <li>دعم ممتد</li>
-            </ul>
-            <a class="btn btn-green" href="#contact">اختيار</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- الأسئلة الشائعة -->
-    <section id="faq" class="section">
-      <div class="card">
-        <h2>الأسئلة الشائعة</h2>
-        <details>
-          <summary>هل تنفذون مشاريع سريعة؟</summary>
-          <p>نعم، نوفر مسار تسليم سريع وفق المتطلبات.</p>
-        </details>
-        <details>
-          <summary>هل توفرون ضمان؟</summary>
-          <p>نضمن جودة التنفيذ والدعم الفني للفترة المتفق عليها.</p>
-        </details>
-        <details>
-          <summary>كيف يتم الدفع؟</summary>
-          <p>نقبل الدفع نقدي، تحويل بنكي، ومحافظ إلكترونية.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- اتصل بنا -->
-    <section id="contact" class="section">
-      <div class="card">
-        <h2>تواصل معنا</h2>
-        <form id="contactForm">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="الاسم" required>
-            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-            <input type="text" name="subject" placeholder="الموضوع" required>
-          </div>
-          <textarea name="message" rows="5" placeholder="رسالتك" required></textarea>
-          <button type="submit" class="btn btn-green">إرسال</button>
-        </form>
-        <p class="form-status muted"></p>
-      </div>
+    <section class="card">
+      <h3>بحث سريع عن التمرين</h3>
+      <input id="searchInput" class="search" placeholder="اكتب اسم التمرين للبحث..." />
+      <p class="muted">ابحث في قاعدة التمارين لعرض التفاصيل بسرعة.</p>
     </section>
   </main>
-<div class="buttons">
-  <!-- زر الاشتراك -->
-  <a href="#subscribe" class="btn btn-green">📩 اشترك الآن</a>
 
-  <!-- زر واتساب -->
-  <a href="https://wa.me/201040363927" target="_blank" class="btn btn-whatsapp">
-    💬 تواصل عبر واتساب
-  </a>
-</div>
-
-  <!-- فوتر -->
-  <footer class="footer">
-    <p>© 2025 ياسر تك — صنع بإتقان في الإسكندرية</p>
+  <footer class="site-footer container">
+    <p>© <strong>ياسر أحمد حمدي</strong> — كل الحقوق محفوظة</p>
   </footer>
 
-  <!-- ربط JavaScript -->
-  <script src="script.js"></script>
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
