@@ -1,79 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ياسر الرياضي — تمارين وتغذية ومتابعة</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>🏋️‍♂️ موقع ياسر الرياضي</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header container">
-    <div class="brand">
-      <div class="logo">🛠️</div>
-      <div>
-        <div class="site-title">ياسر أحمد حمدي</div>
-        <div class="site-sub">موقع رياضي • نظام Push Pull Legs</div>
-      </div>
-    </div>
-    <nav class="main-nav" aria-label="القائمة الرئيسية">
-      <a href="index.html" class="nav-link">الرئيسية</a>
-      <a href="workouts.html" class="nav-link">التمارين</a>
-      <a href="progress.html" class="nav-link">المتابعة</a>
-      <a href="nutrition.html" class="nav-link">التغذية</a>
-      <a href="recovery.html" class="nav-link">الراحة</a>
-    </nav>
-  </header>
 
-  <main class="container">
-    <section class="hero card">
-      <h1>ابدأ برنامج Push · Pull · Legs</h1>
-      <p class="muted">تمارين منظمة، تسجيل تلقائي لتقدمك، ونظام متابعة بسيط يساعدك تشوف النتائج.</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="workouts.html">عرض التمارين</a>
-        <a class="btn" href="progress.html">شاهد تقدمك</a>
-      </div>
-    </section>
+<header>
+  <h1>🏋️‍♂️ ياسر أحمد حمدي</h1>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="workouts.html">التمارين</a>
+    <a href="nutrition.html">التغذية</a>
+    <a href="recovery.html">الراحة</a>
+    <a href="progress.html">المتابعة</a>
+  </nav>
+</header>
 
-    <section class="grid">
-      <article class="card">
-        <h3>نظام التمرين</h3>
-        <p>Push (صدر/أكتاف/ترايسبس) · Pull (ظهر/بايسبس) · Legs (أرجل)</p>
-        <a class="btn" href="workouts.html">تفاصيل التمارين</a>
-      </article>
+<section class="hero">
+  <h2>ابدأ رحلتك الرياضية مع نظام Push Pull Legs</h2>
+  <p>تمارين + تغذية + راحة = نتائج قوية</p>
+  <button onclick="alert('جاهز تبدأ يا ياسر؟ 💪')">ابدأ الآن</button>
+</section>
 
-      <article class="card">
-        <h3>التغذية</h3>
-        <p>خطط وجبات بسيطة قابلة للتعديل حسب هدفك (زيادة/نقصان وزن).</p>
-        <a class="btn" href="nutrition.html">خطط التغذية</a>
-      </article>
+<section class="grid">
+  <div class="card">
+    <h3>💪 التمارين</h3>
+    <p>جدول كامل لنظام Push Pull Legs.</p>
+    <a href="workouts.html" class="btn">عرض التمارين</a>
+  </div>
+  <div class="card">
+    <h3>🍎 التغذية</h3>
+    <p>خطط وجبات يومية صحية.</p>
+    <a href="nutrition.html" class="btn">عرض التغذية</a>
+  </div>
+  <div class="card">
+    <h3>😴 الراحة</h3>
+    <p>نصائح النوم والاستشفاء.</p>
+    <a href="recovery.html" class="btn">عرض الراحة</a>
+  </div>
+  <div class="card">
+    <h3>📊 المتابعة</h3>
+    <p>سجل وزنك وعداتك وشوف تقدمك.</p>
+    <a href="progress.html" class="btn">عرض المتابعة</a>
+  </div>
+</section>
 
-      <article class="card">
-        <h3>الراحة والاستشفاء</h3>
-        <p>نصائح للنوم، إطالات، ويوم راحة فعال.</p>
-        <a class="btn" href="recovery.html">نصائح الراحة</a>
-      </article>
-
-      <article class="card">
-        <h3>المتابعة</h3>
-        <p>سجل وزنك وعدد التمارين وشاهد مخطط التقدم.</p>
-        <a class="btn" href="progress.html">سجل تقدمك</a>
-      </article>
-    </section>
-
-    <section class="card">
-      <h3>بحث سريع عن التمرين</h3>
-      <input id="searchInput" class="search" placeholder="اكتب اسم التمرين للبحث..." />
-      <p class="muted">ابحث في قاعدة التمارين لعرض التفاصيل بسرعة.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer container">
-    <p>© <strong>ياسر أحمد حمدي</strong> — كل الحقوق محفوظة</p>
-  </footer>
-
-  <div id="toast" class="toast" aria-live="polite"></div>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
